@@ -82,6 +82,13 @@
         dateFormat: "Y-m-d",
         defaultDate: "today"
     });
+    flatpickr("#changeTime", {
+        locale: "ar",
+        altInput: false,
+        altFormat: "l , j F Y",
+        dateFormat: "Y-m-d",
+        defaultDate: "today"
+    });
 
     // Property Card Template
     // const propertyImages = [ "image/gallery/g-1.png"];
@@ -190,6 +197,7 @@
     const distanceTypeFilter = document.getElementById("distanceTypeFilter");
     const arrangeTypeFilter = document.getElementById("arrangeTypeFilter");   
     const filteringTypeFilter = document.getElementById("filteringTypeFilter");
+    const filterModelBtn = document.getElementById("filterModelBtn");
     const closeHolidayHomesModal = document.getElementById("closeHolidayHomesModal");
     const districtSearch = document.getElementById("districtSearch");
     const districts = document.querySelectorAll(".district-item");
@@ -200,6 +208,7 @@
     const distanceModal = document.getElementById('distanceModal');
     const arrangeModal = document.getElementById('arrangeModal');
     const filterModal = document.getElementById('filterModal');
+    const filterRatingModal = document.getElementById('filterRatingModal');
     const closeDistrictModal = document.getElementById('closeDistrictModal');
     const closePriceModal = document.getElementById('closePriceModal');
     const closeBedroomsModal = document.getElementById('closeBedroomsModal');
@@ -207,6 +216,8 @@
     const closeDistanceModal = document.getElementById('closeDistanceModal');
     const closeArrangeModal = document.getElementById('closeArrangeModal');
     const closeFilterModal = document.getElementById('closeFilterModal');
+    const closeFilterRatingModal = document.getElementById('closeFilterRatingModal');
+
 
     openBtn.onclick = () => {
         Loginmodal.classList.add("active");
@@ -359,6 +370,16 @@
         });
 
     }
+    if (filterModelBtn) {
+
+        filterModelBtn.addEventListener("click", () => {
+
+            filterRatingModal.classList.add("active");
+            document.body.classList.add("modal-open");
+
+        });
+
+    }
     backToLogin.onclick = (e) => {
         e.preventDefault();
         forgotModal.classList.remove("active");
@@ -432,6 +453,10 @@
         filterModal.classList.remove("active");
         document.body.classList.remove("modal-open");
     };
+    closeFilterRatingModal.onclick = () => {
+        filterRatingModal.classList.remove("active");
+        document.body.classList.remove("modal-open");
+    };
     window.onclick = (e) => {
         if (e.target === Loginmodal) {
             Loginmodal.classList.remove("active");
@@ -485,6 +510,10 @@
         }
         if (e.target === filterModal) {
             filterModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        }
+        if (e.target === filterRatingModal) {
+            filterRatingModal.classList.remove("active");
             document.body.classList.remove("modal-open");
         }
     };
@@ -753,6 +782,37 @@ if(resetRating){
         });
 
         });
+
+
+
+        // Notification Modal 
+const notificationBtn = document.getElementById("notificationBtn");
+const NotificationModal = document.getElementById("Notification-Modal");
+const closeNotificationBtn = document.getElementById("closeNotificationBtn");
+const EmptyNotificationModal = document.getElementById("EmptyNotification-Modal");
+const closeEmptyNotificationBtn = document.getElementById("closeEmptyNotificationBtn");
+
+notificationBtn.addEventListener("click", () => {
+    EmptyNotificationModal.style.display = "flex";
+});
+
+// notificationBtn.addEventListener("click", () => {
+//     NotificationModal.style.display = "flex";
+// }); 
+
+closeNotificationBtn.addEventListener("click", () => {
+    NotificationModal.style.display = "none";
+});
+
+closeEmptyNotificationBtn.addEventListener("click", () => {
+    EmptyNotificationModal.style.display = "none";
+});
+
+EmptyNotificationModal.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+        EmptyNotificationModal.style.display = "none";
+    }
+});
     ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -978,6 +1038,8 @@ if(resetRating){
             return false;
         });
     }
+
+
 
 
     // wow.init();
