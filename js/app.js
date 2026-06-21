@@ -217,7 +217,9 @@
     const closeArrangeModal = document.getElementById('closeArrangeModal');
     const closeFilterModal = document.getElementById('closeFilterModal');
     const closeFilterRatingModal = document.getElementById('closeFilterRatingModal');
-
+    const ProfileBtn = document.getElementById('ProfileBtn');
+    const ProfileModal = document.getElementById('ProfileModal');
+    const closeProfileModal = document.getElementById('closeProfileModal');
 
     openBtn.onclick = () => {
         Loginmodal.classList.add("active");
@@ -250,7 +252,6 @@
         signupModal.classList.remove("active");
         otpModal.classList.add("active");
     }
-
     options.forEach(option => {
 
         option.addEventListener("click", () => {
