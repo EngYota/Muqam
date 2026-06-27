@@ -96,7 +96,7 @@
     function createPropertyCard(imgIndex) {
         // const img = propertyImages[imgIndex % propertyImages.length];
         return `
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-lg-3 col-sm-6 col-xs-12">
             <div class="property-card">
             <div class="card-box">
             <img src="image/gallery/g-1.png" alt="شقة">
@@ -418,46 +418,71 @@
     closedone.onclick = () => {
         donemodal.classList.remove("active");
     };
-    closesearchcity.onclick = () => {
-        Searchcity.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closeHolidayHomesModal.onclick = () => {
-        holidayHomesModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closeDistrictModal.onclick = () => {
-        districtModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closePriceModal.onclick = () => {
-        priceModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closeBedroomsModal.onclick = () => {
-        bedroomsModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closeRatingModal.onclick = () => {
-        ratingModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closeDistanceModal.onclick = () => {
-        distanceModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closeArrangeModal.onclick = () => {
-        arrangeModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closeFilterModal.onclick = () => {
-        filterModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
-    closeFilterRatingModal.onclick = () => {
-        filterRatingModal.classList.remove("active");
-        document.body.classList.remove("modal-open");
-    };
+
+    if (closesearchcity) {
+        closesearchcity.addEventListener("click", () => {
+            Searchcity.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+
+    if(closeHolidayHomesModal){
+        closeHolidayHomesModal.addEventListener("click", () => {
+            holidayHomesModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+
+    if(closeDistrictModal){
+        closeDistrictModal.addEventListener("click", () => {
+            districtModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+
+    if(closePriceModal){
+        closePriceModal.addEventListener("click", () => {
+            priceModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+    if(closeBedroomsModal){
+        closeBedroomsModal.addEventListener("click", () => {
+            bedroomsModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+    if(closeRatingModal){
+        closeRatingModal.addEventListener("click", () => {
+            ratingModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+    if(closeDistanceModal){
+        closeDistanceModal.addEventListener("click", () => {
+            distanceModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+
+    if(closeArrangeModal){
+        closeArrangeModal.addEventListener("click", () => {
+            arrangeModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+    if(closeFilterModal){
+        closeFilterModal.addEventListener("click", () => {
+            filterModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
+    if(closeFilterRatingModal){
+        closeFilterRatingModal.addEventListener("click", () => {
+            filterRatingModal.classList.remove("active");
+            document.body.classList.remove("modal-open");
+        });
+    }
     window.onclick = (e) => {
         if (e.target === Loginmodal) {
             Loginmodal.classList.remove("active");
@@ -609,26 +634,33 @@
           sliderRange.style.width =`${maxPercent - minPercent}%`;
       }
 
-    minSlider.addEventListener(
-        "input",
-        updatePrice
-    );
+      if (minSlider) {
+        minSlider.addEventListener(
+            "input",
+            updatePrice
+        );
+    }
 
-    maxSlider.addEventListener(
-        "input",
-        updatePrice
-    );
+    if (maxSlider) {
+        maxSlider.addEventListener(
+            "input",
+            updatePrice
+        );
+    }
+    const resetPriceBtn = document.getElementById("resetPrice");
 
-    document
-        .getElementById("resetPrice")
-        .addEventListener("click", () => {
-
+    if (resetPriceBtn && minSlider && maxSlider) {
+    
+        resetPriceBtn.addEventListener("click", () => {
+    
             minSlider.value = 3000;
             maxSlider.value = 9000;
-
+    
             updatePrice();
-
+    
         });
+    
+    }
 
 // bedrooms filter
 const bedroomOptions =document.querySelectorAll(".bedroom-option");
@@ -750,26 +782,35 @@ if(resetRating){
         sliderRangeDistance.style.width =`${maxPercent - minPercent}%`;
     }
 
+  if (minDistance) {
     minDistance.addEventListener(
-      "input",
-      updateDistance
-  );
+        "input",
+        updateDistance
+        );
+    }
 
-  maxDistance.addEventListener(
-      "input",
-      updateDistance
-  );
+  if (maxDistance) {
+    maxDistance.addEventListener(
+        "input",
+        updateDistance
+        );
+    }
+      const resetPriceButton = document.getElementById("resetPrice");
 
-  document
-      .getElementById("resetPrice")
-      .addEventListener("click", () => {
+      if (resetPriceButton && minDistance && maxDistance) {
+      
+        resetPriceButton.addEventListener("click", () => {
+      
+            minDistance.value = 3000;
+            maxDistance.value = 9000;
+  
+            updateDistance();
+      
+          });
+      
+      }
 
-        minDistance.value = 3000;
-          maxDistance.value = 9000;
 
-          updateDistance();
-
-      });
 
      //filtering modal 
      const typeBtns =document.querySelectorAll(".type-btn");
@@ -793,27 +834,35 @@ const closeNotificationBtn = document.getElementById("closeNotificationBtn");
 const EmptyNotificationModal = document.getElementById("EmptyNotification-Modal");
 const closeEmptyNotificationBtn = document.getElementById("closeEmptyNotificationBtn");
 
-notificationBtn.addEventListener("click", () => {
-    EmptyNotificationModal.style.display = "flex";
-});
+if (notificationBtn) {
+    notificationBtn.addEventListener("click", () => {
+        EmptyNotificationModal.style.display = "flex";
+    });
+}
+
 
 // notificationBtn.addEventListener("click", () => {
 //     NotificationModal.style.display = "flex";
 // }); 
 
-closeNotificationBtn.addEventListener("click", () => {
-    NotificationModal.style.display = "none";
-});
-
-closeEmptyNotificationBtn.addEventListener("click", () => {
-    EmptyNotificationModal.style.display = "none";
-});
-
-EmptyNotificationModal.addEventListener("click", (e) => {
-    if (e.target === overlay) {
+if (closeNotificationBtn) {
+    closeNotificationBtn.addEventListener("click", () => {
+        NotificationModal.style.display = "none";
+    });
+}
+if (closeEmptyNotificationBtn) {
+    closeEmptyNotificationBtn.addEventListener("click", () => {
         EmptyNotificationModal.style.display = "none";
-    }
-});
+    });
+}
+
+if (EmptyNotificationModal) {
+    EmptyNotificationModal.addEventListener("click", () => {
+        if (e.target === overlay) {
+            EmptyNotificationModal.style.display = "none";
+        }
+    });
+}
     ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -821,7 +870,7 @@ EmptyNotificationModal.addEventListener("click", (e) => {
 
 
 
-
+    const isRTL = document.documentElement.dir === "ltr";
     const nextBtn = document.getElementById("nextBtn");
     const prevBtn = document.getElementById("prevBtn");
     const slider = document.getElementById("citiesSlider");
@@ -843,19 +892,14 @@ EmptyNotificationModal.addEventListener("click", (e) => {
     // citiesSlider
     if (nextBtn) {
         nextBtn.addEventListener("click", () => {
-            slider.scrollBy({
-                left: 300,
-                behavior: "smooth"
-            });
+            slider.scrollLeft += isRTL ? 300 : -300;
         });
     }
     if (prevBtn) {
         prevBtn.addEventListener("click", () => {
-            slider.scrollBy({
-                left: -300,
-                behavior: "smooth"
-            });
+            slider.scrollLeft += isRTL ? -300 : 300;
         });
+       
     }
     // dailySlider
     if (dailynextBtn) {

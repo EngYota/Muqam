@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/animation/animate.min.css">
   <link rel="stylesheet" href="assets/animation/custom-animation.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.rtl.min.css">
+  <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="assets/swiper/swiper.min.css">
   <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="assets/nice-select/nice-select.css">
@@ -19,6 +20,7 @@
     href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
   <link rel="stylesheet" href="css/Style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -87,9 +89,81 @@
         </div>
       </div>
     </header>
+      <!-- Mobile Menu Button Start -->
+      <div class="header header--mobile cc-header-menu mean-container position-relative" id="meanmenu">
+        <div class="mean-bar headerBurgerMenu">
+          <a href="index.html">
+            <img class="mean-bar__logo" alt="Muqam" src="image/Logo/logo.png" />
+          </a>
+          <div class="header__right">
+            <div class="header__actions">
+              <ul>
+                <li>
+                  <a href="#Notification"><i class="fa-regular fa-bell"><span></span></i></a>
+                </li>
+                <li>
+                  <a href="favourits.html"><i class="fa-regular fa-heart"><span></span></i></a>
+                </li>
+                <li>
+                  <a href="#saved"><i class="fa-regular fa-message"><span></span></i></a>
+                </li>
+                <li>
+                  <button class="headerBurgerMenu__button sidebarBtn" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <svg width="50" height="50" viewBox="0 0 100 100">
+                      <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                      <path class="line line2" d="M 20,50 H 80" />
+                      <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="cc cc--slideNav">
+        <div class="cc__logo mb-40">
+          <a href="index.html">
+            <img class="mean-bar__logo" alt="Techkit" src="image/Logo/logo.png" />
+          </a>
+        </div>
+        <div class="offscreen-navigation mb-40">
+          <nav class="menu-main-primary-container">
+            <ul class="menu">
+              <li class="">
+                <a class="animation" href="index.html"> الرئيسية </a></li>
+              <li class="list menu-item-parent">
+                <a href="#!">شقق , فلل , غرف , استديدوهات</a>
+              </li>
+              <li class="list menu-item-parent">
+                <a href="#!">شاليهات , استرحات , منتجعات فندقية</a>
+              </li>
+              <li class="list menu-item-parent">
+                <a href="#!"> مزارع </a>
+              </li>
+              <li class="list menu-item-parent">
+                <a href="#!"> مخيمات </a>
+              </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__button">
+                   
+                     
+          <a class="btn btn--styleOne open-btn" id="openModal" href="#!">
+            <span class="btn__text"> تسجيل الدخول</span>
+          </a>
+          <a class="btn btn--styleTwo open-btn" id="signup" href="#!">
+            <span class="btn__text"> حساب جديد </span>
+          </a>
+        </div>
+      </div>
+      <!-- Mobile Menu Navbar End -->
     <!-- end header -->
        <!-- Hero/Welcome Section Start -->
-       <section class="home-banner page-banner">
+       <section class="home-banner page-banner terms-banner">
         <div class="container">
           <div class="row">
           <div class="banner-text">
@@ -137,7 +211,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -149,7 +223,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -161,7 +235,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -196,7 +270,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -208,7 +282,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -220,7 +294,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -255,7 +329,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -267,7 +341,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -279,7 +353,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -318,7 +392,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -330,7 +404,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -342,7 +416,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -377,7 +451,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -389,7 +463,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -401,7 +475,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -436,7 +510,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -448,7 +522,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -460,7 +534,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -499,7 +573,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -511,7 +585,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -523,7 +597,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -558,7 +632,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -570,7 +644,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -582,7 +656,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -617,7 +691,7 @@
                         <p> الرياض، حي النرجس <span>رقم الحجز: BK-2024-001</span></p>
                       </div>
                       <div class="booking-dates row">
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -629,7 +703,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M6.66675 1.66699V5.00033" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
@@ -641,7 +715,7 @@
                               <p>1447-9-26 </p>
                           </div>
                         </div>
-                        <div class=" col-md-4 col-sm-6 col-xs-12">
+                        <div class=" col-lg-4 col-sm-6 col-xs-12">
                           <div class="booking-date">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M13.3333 17.5V15.8333C13.3333 14.9493 12.9821 14.1014 12.357 13.4763C11.7319 12.8512 10.884 12.5 9.99996 12.5H4.99996C4.1159 12.5 3.26806 12.8512 2.64294 13.4763C2.01782 14.1014 1.66663 14.9493 1.66663 15.8333V17.5" stroke="#AC7330" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>

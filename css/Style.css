@@ -1076,9 +1076,10 @@
   
   a,
   a:active,
-  a:focus {
+  a:focus,
+  a:hover {
     text-decoration: none;
-    outline: none;
+    outline: none !important;
     border: none;
     transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
@@ -2026,8 +2027,9 @@
   .offscreen-navigation li > a {
     display: block;
     position: relative;
-    color: black;
-    font-size: 16px;
+    color: #403f3f;
+    font-size: 14px;
+    margin-bottom: 15px;
     font-weight: 500;
   }
   
@@ -2087,7 +2089,14 @@
     overflow-y: auto;
     min-height: 100vh;
   }
-  
+  [dir="rtl"] .cc--slideNav{
+    transform: translateX(100%);
+    right: 0;
+    left: auto;
+  }
+  .cc--slideNav .btn--styleOne{
+    margin-left: 10px;
+  }
   .cc--slideNav::-webkit-scrollbar {
     display: none;
     /* Safari and Chrome */
@@ -2099,9 +2108,18 @@
   }
   
   @media (max-width: 991px) {
+    [dir="rtl"] .cc--slideNav.show {
+      display: block;
+      left: auto;
+      right: 0;
+      transform: translateX(0%);
+    }
     .cc--slideNav.show {
       display: block;
+      left: 0;
+      right: auto;
     }
+  
   }
   
   @media (max-width: 767px) {
@@ -2540,8 +2558,8 @@
 
   @media(max-width:768px){
     .home-banner .search-box{
-      flex-direction:column;
-      align-items:stretch;
+      flex-direction:row;
+      width: 75%;
     }
 
     .home-banner .search-btn{
@@ -3409,6 +3427,7 @@
   text-decoration: none;
   transition: 0.3s;
 }
+.store-btn:hover{color: #fff;}
 .store-text{
   text-align: left;
 }
@@ -5889,6 +5908,7 @@ body.modal-open{
   background: #fff;
   border-radius: 24px;
   padding: 15px 20px;
+  margin-bottom: 20px;
 }
 .Confirmation-section .right-maincontent .reserve-number{
   background: #F3F4F6;
@@ -6740,18 +6760,18 @@ width: 100%;
 
 @media(max-width:768px){
 
-  .booking-card{
+  /* .booking-card{
       flex-direction:column;
-  }
+  } */
 
   .booking-image{
       width:100%;
       height:200px;
   }
 
-  .booking-content{
+  /* .booking-content{
       flex-direction:column;
-  }
+  } */
 
   .booking-side{
       align-items:flex-start;
@@ -7876,6 +7896,336 @@ color:rgba(19, 19, 19, 0.8);;
 }
 
 /* ltr direction */
-
-
-
+[dir="ltr"] .home-banner .field{
+  border-right: 1px solid rgba(19, 19, 19, 0.1);
+  border-left: none;
+}
+[dir="ltr"] .home-banner .field select,
+[dir="ltr"] .home-banner .field input{
+  padding: 0 15px 0 0px;
+  float: left;
+  text-align: left;
+}
+[dir="ltr"] .slider-buttons{
+  right: 10px;
+  left: auto;
+  direction: rtl;
+}
+[dir="ltr"] .property-card .card-box .heart-btn,
+[dir="ltr"] .property-card .rate{
+  left: auto;
+  right: 8px;
+}
+[dir="ltr"] .property-card .card-box-price .new-price{
+  padding-left: 8px;
+}
+[dir="ltr"] .store-btn{
+  direction: rtl;
+}
+[dir="ltr"] .footer__widget ul li a{
+  padding-left: 6px;
+  padding-right: 0;
+}
+[dir="ltr"] .footer__social {
+  text-align: right;
+}
+[dir="ltr"] .close-btn{
+  left: auto;
+  right: 15px;
+}
+[dir="ltr"] .modal-header{
+  padding-left: 3px;
+  padding-right: 0;
+}
+[dir="ltr"] .phone-icon,
+[dir="ltr"] .password-icon{
+  right: 15px;
+  left: auto;
+}
+[dir="ltr"] .country-code{
+  border-right: 1px solid #eee;
+  border-left: none;
+}
+[dir="ltr"] .remember input{
+  padding-right: 10px;
+  margin-right: 10px;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+[dir="ltr"] .input-icon i{
+  right: 12px;
+  left: auto;
+}
+[dir="ltr"] .signup-modal .input-group input{
+  padding: 0 40px 0 15px;
+}
+[dir="ltr"] .signup-modal .input-group input::placeholder,
+[dir="ltr"] .left-maincontent .date-box{
+  text-align: left;
+}
+[dir="ltr"] .page-banner .field span{
+  padding: 4px 15px 0 0px;
+  float: left;
+  text-align: left;
+}
+[dir="ltr"] .page-banner .search-box{
+  margin: 0 15px 0 30px;
+}
+[dir="ltr"] .home-banner .field:last-child {
+  border-left: none !important;
+  border-right: none;
+}
+[dir="ltr"] .page-banner .search-box-card .showonmap span {
+  padding-right: 0px;
+  padding-left: 8px;
+}
+[dir="ltr"] .filter-item span {
+  padding-right: 16px;
+  padding-left: 0;
+}
+[dir="ltr"] .filter-item i.fa-chevron-down{
+  left: auto;
+  right: 12px;
+}
+[dir="ltr"] #Search-city .login-modal,
+[dir="ltr"]  #holidayHomesModal .login-modal,
+[dir="ltr"] #districtModal .login-modal{
+  left: 58px;
+  right: auto;
+}
+[dir="ltr"] #distanceModal .login-modal{
+  left: 20%;
+  right: auto;
+}
+[dir="ltr"] #arrangeModal .login-modal{
+  left: 22%;
+  right: auto;
+}
+[dir="ltr"] #filterModal .login-modal{
+  right: auto;
+  left: 25%;
+}
+[dir="ltr"] .map-section .card-footer button svg,
+[dir="ltr"] .host-card__button svg,
+[dir="ltr"] .right-maincontent ul li svg,
+[dir="ltr"] .recommendation svg,
+[dir="ltr"] .left-maincontent .date-box h6 svg {
+    margin-left: 0;
+    margin-right: 8px;
+}
+[dir="ltr"] .btn--styleOne{
+  margin-left: 0px;
+  margin-right:14px;
+}
+[dir="ltr"] .breadcrumb-actions,
+[dir="ltr"] .breadcrumb-container{
+  direction: ltr;
+}
+[dir="ltr"] .breadcrumb-actions .action-btn{
+  gap: 9px;
+}
+[dir="ltr"] .property-details .property-rating,
+[dir="ltr"] .left-maincontent .input-group button{
+  right: 10px;
+  left: auto;
+}
+[dir="ltr"] .rating-card .rating-star{
+  margin: 0 0px 14px 28px;
+}
+[dir="ltr"] .policy .policy-item svg,
+[dir="ltr"] .left-maincontent .save-pay svg, 
+[dir="ltr"] .right-maincontent .save-pay svg{
+    float: left;
+    margin: 6px 10px 20px 0px;
+}
+[dir="ltr"] .booking-details .details button{
+  left: auto;
+  right: 24px;
+}
+[dir="ltr"] .booking-details .details button i,
+[dir="ltr"] .left-maincontent .book-btn i{
+  padding-right: 8px;
+  padding-left: 8px;
+  transform: rotate(180deg);
+}
+[dir="ltr"] .payment-card .payment-icon,
+[dir="ltr"] .payment-card img{
+  float: left;
+  margin-left: 0;
+  margin-right: 14px;
+}
+[dir="ltr"] .Host-details .host-info img{
+  float: left;
+  margin-right: 12px;
+  margin-left: 0;
+}
+[dir="ltr"] .Host-details .host-rating svg,
+[dir="ltr"] .Host-details .host-meta svg{
+  margin-left: 0px;
+  margin-right: 3px;
+}
+[dir="ltr"] .Host-details .host-rating span{
+  padding-left: 0;
+  padding-right: 17px;
+}
+[dir="ltr"] .right-maincontent .payment-card.active .check-mark{
+  right: 15px;
+  left: auto;
+}
+[dir="ltr"] .left-maincontent .payment-card,
+[dir="ltr"] .right-maincontent .payment-card{
+  margin-right: 1%;
+  margin-left: 0;
+  float: left;
+}
+[dir="ltr"] .Booking-details .property-card .rate, 
+[dir="ltr"] .Confirmation-section .booking-brief .rate{
+  right: 0;
+  left: 87px;
+}
+[dir="ltr"] .Confirmation-section .right-maincontent .reserve-details-done .property-location{
+  padding-left: 11px;
+  padding-right: 0;
+}
+[dir="ltr"] .Confirmation-section .right-maincontent .reverse-data-details svg{
+  margin-right: 15px;
+  margin-left: 0px;
+}
+[dir="ltr"] .Confirmation-section .right-maincontent .reverse-data-details .arrive-date.last {
+  margin-left: 90px;
+  margin-right: 0;
+}
+[dir="ltr"] #Message-Modal .login-modal,
+[dir="ltr"] #EmptyMessage-Modal .login-modal {
+  right: 24%;
+  left: auto;
+}
+[dir="ltr"] #Notification-Modal .notification-dot {
+  margin-right: 30px;
+  margin-left: auto;
+}
+[dir="ltr"] #Notification-Modal .notification-card{
+  margin: 0 0 15px 20px;
+}
+[dir="ltr"] .message-section .status-dot{
+  left: 23px;
+  right: auto;
+  z-index: 99;
+}
+[dir="ltr"] .message-section .input-group svg{
+  left: 32px;
+  right: auto;
+}
+[dir="ltr"] .message-section .input-group input{
+  padding: 12px 15px 12px 45px;
+}
+[dir="ltr"] .message-section .send-btn {
+   margin-right: 0;
+  margin-left: 20px;
+}
+[dir="ltr"] .message-section .send-btn svg{
+  margin-left: 10px;
+  margin-right: 0;
+  transform: rotate(180deg);
+}
+[dir="ltr"] .terms-section .terms-box svg {
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="ltr"] .invite-friends .code-btns .copy-code{
+  margin: 15px 1% 15px 0;
+}
+[dir="ltr"] .invite-friends .status-link .status-btn svg {
+  margin-left: 0px;
+  margin-right: 12px;
+}
+[dir="ltr"] .invite-friends .invite-list .invite-box .invite-details span{
+  right: 23px;
+  left: auto;
+}
+[dir="ltr"] .wallet-records .wallet-list .wallet-card .wallet-icon,
+[dir="ltr"] .invite-friends .invite-list .invite-box .invite-icon{
+  margin-left: 0px;
+  margin-right: 15px;
+}
+[dir="ltr"] .reservations-section .booking-title strong {
+  float: right;
+}
+[dir="ltr"] .reservations-section .booking-location p span,
+[dir="ltr"] .reservations-section .booking-title span.rate{
+  padding-left: 20px;
+  padding-right: 0;
+}
+[dir="ltr"] .reservations-section .booking-date svg, 
+[dir="ltr"] .reservation-details-page .booking-date svg{
+  margin-left:0px;
+  margin-right: 18px;
+  float: left;
+}
+[dir="ltr"] .reservations-section .booking-actions .cancel-btn i {
+  padding-left: 0px;
+  padding-right: 8px;
+}
+[dir="ltr"] .property-details .type-property{
+  right: 10px;
+  left: auto;
+}
+[dir="ltr"] .reservation-details-page .host-card .host-card-phone h6 svg {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+[dir="ltr"] .reservation-details-page .right-maincontent .delete-policy svg{
+  float: left;
+  margin: 6px 10px 20px 0px;
+}
+[dir="ltr"] .reservation-details-page .right-maincontent .edit{
+  margin-left: 0px;
+  margin-right: 1%;
+}
+[dir="ltr"] .reservation-details-page .payment-methods .next-payment svg {
+  float: left;
+  margin-right: 10px;
+  margin-left: 0;
+}
+[dir="ltr"] #DeleteReserve .reserve-note p{
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 0;
+}
+[dir="ltr"] .member-title i,
+[dir="ltr"] .payment-waySection .add-new-card i {
+  padding-left: 0px;
+  padding-right: 7px;
+}
+[dir="ltr"] .input-icon input{
+  padding: 0 40px 0 15px;
+}
+[dir="ltr"] #ProfileModal .login-modal{
+  right: 11%;
+  left: auto;
+}
+[dir="ltr"] #ProfileModal .title svg {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+[dir="ltr"] .payment-waySection .add-new-card{
+  right: 20px;
+  left: auto;
+}
+[dir="ltr"] .payment-waySection .payment-list .payment-card span{
+  left: auto;
+  right: 23px;
+}
+[dir="ltr"] .payment-waySection .payment-list .payment-card .payment-icon{
+  float: left;
+  margin-right: 14px;
+  margin-left: 0;
+}
+[dir="ltr"] .wallet-records .wallet-list .wallet-card .wallet-details h3 .price{
+  float: right;
+}
+[dir="ltr"] .wallet-records .wallet-list .wallet-card span.completed, 
+[dir="ltr"] .invite-friends .invite-list .invite-box .invite-details span{
+  right: 23px;
+  left: auto;
+}
